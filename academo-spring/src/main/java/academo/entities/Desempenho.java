@@ -1,4 +1,5 @@
-package api.academia.entities;
+package academo.entities;
 
 public record Desempenho() {
+
 }
