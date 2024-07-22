@@ -1,4 +1,5 @@
-package api.academia.repositorys;
+package academo.repositorys;
 
 public interface ExercicioRepository {
+
 }
