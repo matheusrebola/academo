@@ -1,10 +1,10 @@
-package api.academia;
+package academo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class AcademoApplicationTests {
 
 	@Test
 	void contextLoads() {
