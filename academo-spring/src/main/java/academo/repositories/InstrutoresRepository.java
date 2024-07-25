@@ -1,4 +1,4 @@
-package academo.repositorys;
+package academo.repositories;
 
 import java.util.UUID;
 
