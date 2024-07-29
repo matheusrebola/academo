@@ -1,5 +1,12 @@
 package academo.dtos;
 
-public record AcessosCreateDto() {
+import java.time.LocalDateTime;
+
+import academo.entities.Alunos;
+
+public record AcessosCreateDto(
+		LocalDateTime dataEntrada,
+		LocalDateTime dataSaida,
+		Alunos aluno) {
 
 }

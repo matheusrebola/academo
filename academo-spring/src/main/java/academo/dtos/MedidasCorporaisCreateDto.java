@@ -1,5 +1,9 @@
 package academo.dtos;
 
-public record MedidasCorporaisCreateDto() {
+import academo.entities.LocalMedido;
+
+public record MedidasCorporaisCreateDto(
+		Float medida,
+		LocalMedido localMedido) {
 
 }

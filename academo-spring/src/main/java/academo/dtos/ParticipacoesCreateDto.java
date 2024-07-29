@@ -1,5 +1,10 @@
 package academo.dtos;
 
-public record ParticipacoesCreateDto() {
+import academo.entities.Alunos;
+import academo.entities.Aulas;
+
+public record ParticipacoesCreateDto(
+		Alunos aluno,
+		Aulas aula) {
 
 }
