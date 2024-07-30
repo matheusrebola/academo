@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import academo.entities.Alunos;
-import academo.entities.Desempenho;
+import academo.entities.Desempenhos;
 import academo.entities.MedidasCorporais;
 import jakarta.validation.constraints.NotNull;
 
@@ -14,7 +14,7 @@ public record EvolucaoAlunoDto(
 		Float peso,
 		Float altura,
 		MedidasCorporais medidasCorporais,
-		Desempenho desempenho,
+		Desempenhos desempenho,
 		Alunos aluno) {
 
 }

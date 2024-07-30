@@ -3,7 +3,7 @@ package academo.dtos;
 import java.time.LocalDateTime;
 
 import academo.entities.Alunos;
-import academo.entities.Desempenho;
+import academo.entities.Desempenhos;
 import academo.entities.MedidasCorporais;
 
 public record EvolucaoAlunoCreateDto(
@@ -11,7 +11,7 @@ public record EvolucaoAlunoCreateDto(
 		Float peso,
 		Float altura,
 		MedidasCorporais medidasCorporais,
-		Desempenho desempenho,
+		Desempenhos desempenho,
 		Alunos aluno) {
 
 }
