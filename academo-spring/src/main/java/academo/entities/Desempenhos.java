@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public record Desempenho(
+public record Desempenhos(
 		@Id @GeneratedValue(strategy = GenerationType.UUID) UUID id,
 		Exercicios exercicio,
 		Aparelhos aparelho,

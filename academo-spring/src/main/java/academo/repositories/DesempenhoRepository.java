@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import academo.entities.Desempenho;
+import academo.entities.Desempenhos;
 
-public interface DesempenhoRepository extends JpaRepository<Desempenho, UUID> {
+public interface DesempenhoRepository extends JpaRepository<Desempenhos, UUID> {
 
 }

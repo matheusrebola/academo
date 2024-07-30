@@ -15,7 +15,7 @@ public record EvolucaoAlunos(
 		Float peso,
 		Float altura,
 		MedidasCorporais medidasCorporais,
-		Desempenho desempenho,
+		Desempenhos desempenho,
 		Alunos aluno) {
 
 }
