@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+  db_leitura:
+    image: mysql:latest
+    container_name: atena_mysql_db_leitura
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: leitura_db
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - db_leitura_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  db_data_analytics:
+    image: mysql:latest
+    container_name: atena_mysql_db_data_analytics
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: data_analytics
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - db_data_analytics_data:/var/lib/mysql
+    ports:
+      - "3307:3307"
+
+volumes:
+  db_leitura_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/atena/mysql/atena_db_leitura_data
+
+  db_data_analytics_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/atena/mysql/atena_db_data_analytics_data

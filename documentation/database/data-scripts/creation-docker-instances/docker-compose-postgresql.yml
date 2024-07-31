@@ -1,0 +1,61 @@
+version: '3.1'
+
+services:
+  db_escrita:
+    image: postgres:latest
+    container_name: atena_postgres_db_escrita
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: escrita
+    volumes:
+      - db_escrita_data:/var/lib/postgresql/data
+    ports:
+      - "5430:5432"
+
+  db_backup:
+    image: postgres:latest
+    container_name: atena_postgres_db_backup
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: backup
+    volumes:
+      - db_backup_data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+
+  db_analised_data:
+    image: postgres:latest
+    container_name: atena_postgres_db_analised_data
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: analised_data
+    volumes:
+      - db_analised_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  db_escrita_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/atena/postgresql/db_escrita_data
+
+  db_backup_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/atena/postgresql/db_backup_data
+
+  db_analised_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/atena/postgresql/db_analised_data
+

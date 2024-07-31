@@ -1,0 +1,12 @@
+Substitua /path/to/your/data/directory pelo caminho do diretório onde você deseja armazenar os dados.
+
+Passos para Executar:
+	Torne o script setup.sh executável: chmod +x setup.sh
+	Execute o script: ./setup.sh
+Notas
+    Volume Directories: Especifiquei os diretórios de volumes para MySQL e PostgreSQL separadamente.
+    Verificações de Existência: Adicionei verificações para cada diretório de volume.
+    Verificações de Erros: Adicionei verificações de erros após cada comando docker-compose para garantir que os contêineres foram iniciados corretamente.
+    Docker Compose Files: Certifique-se de que os arquivos docker-compose-mysql.yml e docker-compose-postgresql.yml estejam no mesmo diretório que o script ou ajuste o caminho conforme necessário.
+
+Certifique-se de que os arquivos docker-compose-mysql.yml e docker-compose-postgresql.yml estão configurados corretamente e contêm as configurações necessárias para os bancos de dados MySQL e PostgreSQL, respectivamente.
